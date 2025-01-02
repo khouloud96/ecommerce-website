@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { SubmitHandler } from "react-hook-form";
 import { useForm } from "react-hook-form";
 
 import Layout from "../layouts/Main";
@@ -8,15 +9,21 @@ import { postData } from "../utils/services";
 type LoginMail = {
   email: string;
   password: string;
+  keepSigned: boolean;
 };
 
 const LoginPage = () => {
-  const { register, handleSubmit, errors } = useForm();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<LoginMail>();
 
-  const onSubmit = async (data: LoginMail) => {
+  const onSubmit: SubmitHandler<LoginMail> = async (data) => {
     await postData(`${server}/api/login`, {
       email: data.email,
       password: data.password,
+      keepSigned: data.keepSigned,
     });
   };
 
@@ -45,23 +52,19 @@ const LoginPage = () => {
                   className="form__input"
                   placeholder="email"
                   type="text"
-                  name="email"
-                  ref={register({
-                    required: true,
-                    pattern:
-                      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                  {...register("email", {
+                    required: "This field is required",
+                    pattern: {
+                      value:
+                        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                      message: "Please write a valid email",
+                    },
                   })}
                 />
-
-                {errors.email && errors.email.type === "required" && (
+                {errors.email && (
                   <p className="message message--error">
-                    This field is required
-                  </p>
-                )}
-
-                {errors.email && errors.email.type === "pattern" && (
-                  <p className="message message--error">
-                    Please write a valid email
+                    {typeof errors.email.message === "string" &&
+                      errors.email.message}
                   </p>
                 )}
               </div>
@@ -71,12 +74,14 @@ const LoginPage = () => {
                   className="form__input"
                   type="password"
                   placeholder="Password"
-                  name="password"
-                  ref={register({ required: true })}
+                  {...register("password", {
+                    required: "This field is required",
+                  })}
                 />
-                {errors.password && errors.password.type === "required" && (
+                {errors.password && (
                   <p className="message message--error">
-                    This field is required
+                    {typeof errors.password.message === "string" &&
+                      errors.password.message}
                   </p>
                 )}
               </div>
@@ -87,21 +92,15 @@ const LoginPage = () => {
                     htmlFor="check-signed-in"
                     className="checkbox checkbox--sm"
                   >
-                    <input
-                      type="checkbox"
-                      name="keepSigned"
-                      id="check-signed-in"
-                      ref={register({ required: false })}
-                    />
+                    <input type="checkbox" {...register("keepSigned")} />
                     <span className="checkbox__check" />
                     <p>Keep me signed in</p>
                   </label>
                 </div>
-                <Link
-                  href="/forgot-password"
-                  className="form__info__forgot-password"
-                >
-                  Forgot password?
+                <Link href="/forgot-password">
+                  <span className="form__info__forgot-password">
+                    Forgot password?
+                  </span>
                 </Link>
               </div>
 

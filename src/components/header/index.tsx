@@ -1,9 +1,9 @@
+import type { RootState } from "@/store";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useSelector } from "react-redux";
 import { useClickAway } from "react-use";
-import type { RootState } from "@/store";
 
 import Logo from "../../assets/icons/logo";
 
@@ -14,7 +14,7 @@ type HeaderType = {
 const Header = ({ isErrorPage }: HeaderType) => {
   const router = useRouter();
   const { cartItems } = useSelector((state: RootState) => state.cart);
-  const arrayPaths = ["/"];
+  const arrayPaths = useMemo(() => ["/"], []);
 
   const [onTop, setOnTop] = useState(
     !(!arrayPaths.includes(router.pathname) || isErrorPage)
@@ -41,7 +41,7 @@ const Header = ({ isErrorPage }: HeaderType) => {
     window.onscroll = function () {
       headerClass();
     };
-  }, []);
+  }, [arrayPaths, isErrorPage, router.pathname]);
 
   const closeMenu = () => {
     setMenuOpen(false);
@@ -61,7 +61,7 @@ const Header = ({ isErrorPage }: HeaderType) => {
         <Link href="/">
           <h1 className="site-logo">
             <Logo />
-            E-Shop
+            ChicCloset
           </h1>
         </Link>
         <nav

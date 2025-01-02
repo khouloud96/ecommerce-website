@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="site-footer__top">
           <div className="site-footer__description">
             <h6>
-              <Logo /> <span>E</span>-Shop
+              <Logo /> <span>Chic</span>Closet
             </h6>
             <p>
               House My Brand designs clothing for the young, the old & everyone
@@ -94,7 +94,7 @@ const Footer = () => {
 
       <div className="site-footer__bottom">
         <div className="container">
-          <p>DESIGN BY ICEO.CO - © 2019. ALL RIGHTS RESERVED.</p>
+          <p>DESIGN BY ICEO.CO - © 2025. ALL RIGHTS RESERVED.</p>
         </div>
       </div>
     </footer>

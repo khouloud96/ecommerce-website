@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { SubmitHandler } from "react-hook-form";
 import { useForm } from "react-hook-form";
 
 import Layout from "../layouts/Main";
@@ -7,14 +8,20 @@ import { postData } from "../utils/services";
 
 type ForgotMail = {
   email: string;
+  password: string;
 };
 
 const ForgotPassword = () => {
-  const { register, handleSubmit, errors } = useForm();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<ForgotMail>();
 
-  const onSubmit = async (data: ForgotMail) => {
+  const onSubmit: SubmitHandler<ForgotMail> = async (data) => {
     await postData(`${server}/api/login`, {
       email: data.email,
+      password: data.password,
     });
   };
 
@@ -41,23 +48,19 @@ const ForgotPassword = () => {
                   className="form__input"
                   placeholder="email"
                   type="text"
-                  name="email"
-                  ref={register({
-                    required: true,
-                    pattern:
-                      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                  {...register("email", {
+                    required: "This field is required",
+                    pattern: {
+                      value:
+                        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                      message: "Please write a valid email",
+                    },
                   })}
                 />
-
-                {errors.email && errors.email.type === "required" && (
+                {errors.email && (
                   <p className="message message--error">
-                    This field is required
-                  </p>
-                )}
-
-                {errors.email && errors.email.type === "pattern" && (
-                  <p className="message message--error">
-                    Please write a valid email
+                    {typeof errors.email.message === "string" &&
+                      errors.email.message}
                   </p>
                 )}
               </div>
@@ -67,12 +70,14 @@ const ForgotPassword = () => {
                   className="form__input"
                   type="password"
                   placeholder="Password"
-                  name="password"
-                  ref={register({ required: true })}
+                  {...register("password", {
+                    required: "This field is required",
+                  })}
                 />
-                {errors.password && errors.password.type === "required" && (
+                {errors.password && (
                   <p className="message message--error">
-                    This field is required
+                    {typeof errors.password.message === "string" &&
+                      errors.password.message}
                   </p>
                 )}
               </div>
