@@ -6,7 +6,7 @@ export default (req: NextApiRequest, res: NextApiResponse) => {
   const { email } = request;
   const { password } = request;
 
-  if (email === "johndoe@mail.com" && password === "ecommerce") {
+  if (email === "khouloud@gmail.com" && password === "khouloud") {
     res.status(200).json({ status: true });
   } else {
     res.status(401).json({ status: false });

@@ -14,7 +14,7 @@ const PageIntro = () => {
           >
             <div className="container">
               <div className="page-intro__slide__content">
-                <h2>Sale of the summer collection</h2>
+                <h2>Sale of the winter collection</h2>
                 <a href="#" className="btn-shop">
                   <i className="icon-right" />
                   Shop now

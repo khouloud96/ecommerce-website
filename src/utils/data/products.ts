@@ -1,11 +1,11 @@
 export const products = [
   {
     id: "1",
-    name: "T-Shirt Summer Vibes",
+    name: "Anna Cardigan",
     price: 119.99,
     discount: 30,
     quantityAvailable: 2,
-    category: "T-shirt",
+    category: "Cardigan",
     currentPrice: 89.99,
     sizes: ["xl", "l"],
     colors: ["#000", "6F3E18", "#D4BE8D", "#FFF"],
@@ -38,22 +38,22 @@ export const products = [
     },
     reviews: [
       {
-        name: "John Doe",
-        avatar: "/images/featured-1.jpg",
+        name: "Khouloud Ben Salem",
+        avatar: "/images/avatar-1.webp",
         description:
           "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s</p>",
         punctuation: 2,
       },
       {
-        name: "John Doe",
-        avatar: "/images/featured-1.jpg",
+        name: "Adem Miss",
+        avatar: "/images/avatar-2.webp",
         description:
           "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s</p>",
         punctuation: 4,
       },
       {
-        name: "John Doe",
-        avatar: "/images/featured-1.jpg",
+        name: "Elaa Elaa",
+        avatar: "/images/avatar-3.webp",
         description:
           "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s</p>",
         punctuation: 5,
@@ -62,10 +62,10 @@ export const products = [
   },
   {
     id: "2",
-    name: "T-Shirt Summer Vibes",
+    name: "Jeans Pants",
     price: 119.99,
     quantityAvailable: 2,
-    category: "T-shirt",
+    category: "Jeans",
     currentPrice: 89.99,
     sizes: ["xl", "l"],
     colors: ["#000", "6F3E18", "#D4BE8D", "#FFF"],
@@ -98,22 +98,22 @@ export const products = [
     },
     reviews: [
       {
-        name: "John Doe",
-        avatar: "/images/featured-1.jpg",
+        name: "Khouloud Ben Salem",
+        avatar: "/images/avatar-1.webp",
         description:
           "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s</p>",
         punctuation: 2,
       },
       {
-        name: "John Doe",
-        avatar: "/images/featured-1.jpg",
+        name: "Adem Miss",
+        avatar: "/images/avatar-2.webp",
         description:
           "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s</p>",
         punctuation: 4,
       },
       {
-        name: "John Doe",
-        avatar: "/images/featured-1.jpg",
+        name: "Elaa Elaa",
+        avatar: "/images/avatar-3.webp",
         description:
           "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s</p>",
         punctuation: 5,
@@ -122,14 +122,14 @@ export const products = [
   },
   {
     id: "3",
-    name: "T-Shirt Summer Vibes",
+    name: "Khouloud Set",
     price: 119.99,
     quantityAvailable: 2,
-    category: "T-shirt",
+    category: "Sets",
     currentPrice: 89.99,
     sizes: ["xl", "l"],
     colors: ["#000", "6F3E18", "#D4BE8D", "#FFF"],
-    images: ["/images/products/product-3.jpg"],
+    images: ["/images/products/product-3.webp"],
     punctuation: {
       countOpinions: 81,
       punctuation: 4.5,
@@ -158,22 +158,22 @@ export const products = [
     },
     reviews: [
       {
-        name: "John Doe",
-        avatar: "/images/featured-1.jpg",
+        name: "Khouloud Ben Salem",
+        avatar: "/images/avatar-1.webp",
         description:
           "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s</p>",
         punctuation: 2,
       },
       {
-        name: "John Doe",
-        avatar: "/images/featured-1.jpg",
+        name: "Adem Miss",
+        avatar: "/images/avatar-2.webp",
         description:
           "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s</p>",
         punctuation: 4,
       },
       {
-        name: "John Doe",
-        avatar: "/images/featured-1.jpg",
+        name: "Elaa Elaa",
+        avatar: "/images/avatar-3.webp",
         description:
           "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s</p>",
         punctuation: 5,
@@ -182,14 +182,14 @@ export const products = [
   },
   {
     id: "4",
-    name: "T-Shirt Summer Vibes",
+    name: "Cila Overshirt",
     price: 119.99,
     quantityAvailable: 2,
     category: "T-shirt",
     currentPrice: 89.99,
     sizes: ["xl", "l"],
     colors: ["#000", "6F3E18", "#D4BE8D", "#FFF"],
-    images: ["/images/products/product-4.jpg"],
+    images: ["/images/products/product-4.webp"],
     punctuation: {
       countOpinions: 81,
       punctuation: 4.5,
@@ -218,22 +218,22 @@ export const products = [
     },
     reviews: [
       {
-        name: "John Doe",
-        avatar: "/images/featured-1.jpg",
+        name: "Khouloud Ben Salem",
+        avatar: "/images/avatar-1.webp",
         description:
           "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s</p>",
         punctuation: 2,
       },
       {
-        name: "John Doe",
-        avatar: "/images/featured-1.jpg",
+        name: "Adem Miss",
+        avatar: "/images/avatar-2.webp",
         description:
           "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s</p>",
         punctuation: 4,
       },
       {
-        name: "John Doe",
-        avatar: "/images/featured-1.jpg",
+        name: "Elaa Elaa",
+        avatar: "/images/avatar-3.webp",
         description:
           "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s</p>",
         punctuation: 5,
@@ -242,14 +242,14 @@ export const products = [
   },
   {
     id: "5",
-    name: "T-Shirt Summer Vibes",
+    name: "Selly Coat",
     price: 119.99,
     quantityAvailable: 2,
-    category: "T-shirt",
+    category: "Coat",
     currentPrice: 89.99,
     sizes: ["xl", "l"],
     colors: ["#000", "6F3E18", "#D4BE8D", "#FFF"],
-    images: ["/images/products/product-5.jpg"],
+    images: ["/images/products/product-5.webp"],
     punctuation: {
       countOpinions: 81,
       punctuation: 4.5,
@@ -278,22 +278,22 @@ export const products = [
     },
     reviews: [
       {
-        name: "John Doe",
-        avatar: "/images/featured-1.jpg",
+        name: "Khouloud Ben Salem",
+        avatar: "/images/avatar-1.webp",
         description:
           "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s</p>",
         punctuation: 2,
       },
       {
-        name: "John Doe",
-        avatar: "/images/featured-1.jpg",
+        name: "Adem Miss",
+        avatar: "/images/avatar-2.webp",
         description:
           "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s</p>",
         punctuation: 4,
       },
       {
-        name: "John Doe",
-        avatar: "/images/featured-1.jpg",
+        name: "Elaa Elaa",
+        avatar: "/images/avatar-3.webp",
         description:
           "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s</p>",
         punctuation: 5,
@@ -302,15 +302,15 @@ export const products = [
   },
   {
     id: "6",
-    name: "T-Shirt Summer Vibes",
+    name: "Boots rock",
     price: 119.99,
     discount: 30,
     quantityAvailable: 2,
-    category: "T-shirt",
+    category: "Shoes",
     currentPrice: 89.99,
     sizes: ["xl", "l"],
     colors: ["#000", "6F3E18", "#D4BE8D", "#FFF"],
-    images: ["/images/products/product-6.jpg"],
+    images: ["/images/products/product-6.webp"],
     punctuation: {
       countOpinions: 81,
       punctuation: 4.5,
@@ -339,22 +339,22 @@ export const products = [
     },
     reviews: [
       {
-        name: "John Doe",
-        avatar: "/images/featured-1.jpg",
+        name: "Khouloud Ben Salem",
+        avatar: "/images/avatar-1.webp",
         description:
           "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s</p>",
         punctuation: 2,
       },
       {
-        name: "John Doe",
-        avatar: "/images/featured-1.jpg",
+        name: "Adem Miss",
+        avatar: "/images/avatar-2.webp",
         description:
           "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s</p>",
         punctuation: 4,
       },
       {
-        name: "John Doe",
-        avatar: "/images/featured-1.jpg",
+        name: "Elaa Elaa",
+        avatar: "/images/avatar-3.webp",
         description:
           "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s</p>",
         punctuation: 5,

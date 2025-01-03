@@ -1,6 +1,6 @@
 # Ecommerce website
 
-Welcome to my E-commerce- website, your ultimate online destination for the latest fashion trends. Our platform offers a wide range of clothing options for menand women, ensuring that you find the perfect outfit for any occasion. Built with cutting-edge technology, our website provides a seamless and enjoyable shopping experience.
+Welcome to ChicCloset website, your ultimate online destination for the latest fashion trends. Our platform offers a wide range of clothing options for women, ensuring that you find the perfect outfit for any occasion. Built with cutting-edge technology, our website provides a seamless and enjoyable shopping experience.
 
 # Next.js Ecommerce
 

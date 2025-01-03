@@ -37,7 +37,7 @@ const IndexPage = () => {
           </article>
 
           <article
-            style={{ backgroundImage: "url(/images/featured-3.jpg)" }}
+            style={{ backgroundImage: "url(/images/featured-3.webp)" }}
             className="featured-item featured-item-small"
           >
             <div className="featured-item__content">
