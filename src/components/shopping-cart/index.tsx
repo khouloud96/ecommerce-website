@@ -34,7 +34,7 @@ const ShoppingCart = () => {
                   <th style={{ textAlign: "left" }}>Product</th>
                   <th>Color</th>
                   <th>Size</th>
-                  <th>Ammount</th>
+                  <th>Amount</th>
                   <th>Price</th>
                   <th />
                 </tr>

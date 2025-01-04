@@ -1,4 +1,5 @@
-import SwiperCore, { EffectFade, Navigation } from "swiper";
+import SwiperCore from "swiper";
+import { EffectFade, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 const PageIntro = () => {
@@ -6,7 +7,12 @@ const PageIntro = () => {
 
   return (
     <section className="page-intro">
-      <Swiper navigation effect="fade" className="swiper-wrapper">
+      <Swiper
+        navigation
+        effect="fade"
+        modules={[EffectFade, Navigation]}
+        className="swiper-wrapper"
+      >
         <SwiperSlide>
           <div
             className="page-intro__slide"
@@ -31,7 +37,7 @@ const PageIntro = () => {
           >
             <div className="container">
               <div className="page-intro__slide__content">
-                <h2>Make your house into a home</h2>
+                <h2>Turn your wardrobe into a true reflection of yourself</h2>
                 <a href="#" className="btn-shop">
                   <i className="icon-right" />
                   Shop now

@@ -10,8 +10,9 @@ const Footer = () => {
               <Logo /> <span>Chic</span>Closet
             </h6>
             <p>
-              House My Brand designs clothing for the young, the old & everyone
-              in between – but most importantly, for the fashionable
+              ChicCloset My Brand designs clothing for the young, the old &
+              everyone in between – but most importantly, for the fashionable
+              women.
             </p>
             <ul className="site-footer__social-networks">
               <li>
@@ -32,11 +33,6 @@ const Footer = () => {
               <li>
                 <a href="#">
                   <i className="icon-instagram" />
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i className="icon-youtube-play" />
                 </a>
               </li>
             </ul>
@@ -72,20 +68,14 @@ const Footer = () => {
               <li>
                 <a href="#">Newsletter</a>
               </li>
-              <li>
-                <a href="#">Bacome a member</a>
-              </li>
-              <li>
-                <a href="#">Site feedback</a>
-              </li>
             </ul>
             <ul>
               <li>Contact</li>
               <li>
-                <a href="#">store@uikit.com</a>
+                <a href="#">contact@chiccloset.fr</a>
               </li>
               <li>
-                <a href="#">Hotline: +1 131 138 138</a>
+                <a href="#">Hotline: +33 7 49 21 78 84</a>
               </li>
             </ul>
           </div>

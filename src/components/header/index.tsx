@@ -21,8 +21,13 @@ const Header = ({ isErrorPage }: HeaderType) => {
   );
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
+  const [productsMenuOpen, setProductsMenuOpen] = useState(false);
   const navRef = useRef(null);
   const searchRef = useRef(null);
+  const menuRef = useRef(null);
+
+  // Ferme le menu lorsque l'utilisateur clique à l'extérieur
+  useClickAway(menuRef, () => setProductsMenuOpen(false));
 
   const headerClass = () => {
     if (window.pageYOffset === 0) {
@@ -68,9 +73,51 @@ const Header = ({ isErrorPage }: HeaderType) => {
           ref={navRef}
           className={`site-nav ${menuOpen ? "site-nav--open" : ""}`}
         >
-          <Link href="/products">Products</Link>
-          <a href="#">Inspiration</a>
-          <a href="#">Rooms</a>
+          {/* Menu "Products" avec sous-menu */}
+          <div className="link-with-chevron" ref={menuRef}>
+            <a
+              onClick={() => setProductsMenuOpen((prev) => !prev)}
+              className="products-link"
+            >
+              Products
+            </a>
+            {productsMenuOpen && (
+              <div className="products-menu">
+                <ul>
+                  <li>
+                    <Link href="/products">All collection</Link>
+                  </li>
+                  <li>
+                    <Link href="/products/dresses">Dresses</Link>
+                  </li>
+                  <li>
+                    <Link href="/products/sets">Sets</Link>
+                  </li>
+                  <li>
+                    <Link href="/products/shirts">shirts</Link>
+                  </li>
+                  <li>
+                    <Link href="/products/pants">Pants</Link>
+                  </li>
+                  <li>
+                    <Link href="/products/cardigans-coats">
+                      Cardigans & Coats
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/products/skirts-shorts">Skirts & Shorts</Link>
+                  </li>
+                  <li>
+                    <Link href="/products/sweater-sweatshirt">
+                      sweater & Sweatshirt
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            )}
+          </div>
+          <Link href="/inspiration">Inspiration</Link>
+          <Link href="/contact">Contact</Link>
           <button className="site-nav__btn">
             <p>Account</p>
           </button>

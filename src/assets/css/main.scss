@@ -258,7 +258,7 @@ h5 {
   cursor: pointer;
   &.btn--rounded {
     font-size: 12px;
-    background: #fff;
+    background: var(--color-white);
     display: inline-block;
     border-radius: 50px;
     padding: 11px 20px;
@@ -315,6 +315,9 @@ h5 {
         }
       }
     }
+    i {
+      color: var(--color-orange);
+    }
   }
 }
 
@@ -325,7 +328,7 @@ h5 {
   left: 0;
   z-index: 999;
   height: 65px;
-  color: #fff;
+  color: var(--color-white);
   box-shadow: none;
   transition: all 0.3s ease;
   @include breakpoint(phone) {
@@ -335,7 +338,7 @@ h5 {
     &:before,
     &:after,
     span {
-      background-color: #fff;
+      background-color: var(--color-white);
     }
   }
   .container {
@@ -344,7 +347,7 @@ h5 {
     align-items: center;
   }
   .site-logo {
-    color: #fff;
+    color: var(--color-white);
   }
   .site-header__btn-avatar {
     display: none;
@@ -371,7 +374,7 @@ h5 {
       }
     }
     i {
-      color: #fff;
+      color: var(--color-white);
       z-index: 10;
       transition: all 0.3s ease;
       position: relative;
@@ -387,7 +390,7 @@ h5 {
     margin-left: auto;
     margin-right: auto;
     position: fixed;
-    background-color: #fff;
+    background-color: var(--color-white);
     transition: all 0.3s ease;
     border-left: 1px solid #e5e5e5;
     @include breakpoint(tablet-lg) {
@@ -397,6 +400,68 @@ h5 {
       width: auto;
       border: none;
       background-color: transparent;
+    }
+    .link-with-chevron {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+    }
+    .products-link {
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      position: relative;
+    }
+    .products-link::after {
+      content: "";
+      mask-image: url("/images/icons/chevron-down.svg");
+      -webkit-mask-image: url("/images/icons/chevron-down.svg");
+      mask-size: cover;
+      -webkit-mask-size: cover;
+      background-color: currentColor; /* Suit la couleur du texte */
+      width: 10px;
+      height: 10px;
+      margin-left: 0.5em;
+      transition: transform 0.2s ease;
+    }
+    .products-link:hover::after {
+      transform: translateX(3px);
+    }
+    .products-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: var(--color-white);
+      border: none;
+      box-shadow: none;
+      z-index: 1000;
+      width: 250px;
+      @include breakpoint(tablet-lg) {
+        top: 130%;
+        border: 1px solid var(--color-orange-light);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 200px;
+      }
+    }
+    .products-menu ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    .products-menu ul li {
+      padding: 0;
+      @include breakpoint(tablet-lg) {
+        padding: 10px 16px;
+      }
+    }
+    .products-menu ul li a {
+      text-decoration: none;
+      color: var(--color-black);
+      display: block;
+    }
+    .products-menu ul li a:hover {
+      color: var(--color-orange);
     }
     .site-nav__btn {
       padding: 13px 18px;
@@ -422,7 +487,7 @@ h5 {
       @include breakpoint(tablet-lg) {
         width: auto;
         padding: 0;
-        color: #fff;
+        color: var(--color-white);
         margin-right: 76px;
         display: inline-block;
         font-size: 14px;
@@ -431,7 +496,7 @@ h5 {
   }
   &.site-header--fixed {
     border-bottom: 1px solid #e5e5e5;
-    background-color: #fff;
+    background-color: var(--color-white);
     .btn-hamburger {
       &:before,
       &:after,
@@ -481,7 +546,7 @@ h5 {
     height: 100vh;
     right: 0;
     transition: all 0.3s ease;
-    background-color: #fff;
+    background-color: var(--color-white);
     @include breakpoint(tablet-lg) {
       position: static;
       height: auto;
@@ -530,7 +595,7 @@ h5 {
       width: 80%;
       text-align: center;
       padding-right: 40px;
-      background-color: #fff;
+      background-color: var(--color-white);
       @include breakpoint(tablet-lg) {
         width: 300px;
         padding: 0 19px;
@@ -579,12 +644,12 @@ h5 {
       display: flex;
     }
     &:before {
-      color: #fff;
+      color: var(--color-white);
       content: "\e80b";
       font-family: "icons";
     }
     &:hover {
-      background: #fff;
+      background: var(--color-white);
       &:before {
         color: #000;
       }
@@ -613,7 +678,7 @@ h5 {
       display: block;
     }
     &:before {
-      background: #fff;
+      background: var(--color-white);
       content: "";
       left: 0;
       bottom: 0;
@@ -708,18 +773,18 @@ h5 {
       }
       h2 {
         font-size: 36px;
-        color: #fff;
+        color: var(--color-white);
         font-weight: 600;
         line-height: 120%;
         margin-bottom: 45px;
         @include breakpoint(phone) {
           font-size: 64px;
-          width: 600px;
+          width: 700px;
         }
       }
       .btn-shop {
         display: flex;
-        color: #fff;
+        color: var(--color-white);
         align-items: center;
         i {
           justify-content: center;
@@ -727,7 +792,7 @@ h5 {
           display: flex;
           width: 40px;
           height: 40px;
-          color: #fff;
+          color: var(--color-white);
           font-size: 15px;
           margin-right: 10px;
           background-color: var(--color-orange);
@@ -812,7 +877,7 @@ h5 {
       h3 {
         font-weight: 400;
         font-size: 20px;
-        color: #fff;
+        color: var(--color-white);
         margin-bottom: 15px;
         line-height: 150%;
         @include breakpoint(phone) {
@@ -899,7 +964,7 @@ h5 {
       font-size: 12px;
       border: none;
       height: 32px;
-      background-color: #fff;
+      background-color: var(--color-white);
       position: absolute;
       box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.16);
       @include breakpoint(phone) {
@@ -911,7 +976,7 @@ h5 {
       }
       &:hover,
       &.btn-heart--active {
-        color: #fff;
+        color: var(--color-white);
         background-color: var(--color-orange);
       }
     }
@@ -926,7 +991,7 @@ h5 {
       position: absolute;
     }
     .product__discount {
-      color: #fff;
+      color: var(--color-white);
       padding: 5px 9px;
       border-radius: 40px;
       font-weight: 500;
@@ -1029,7 +1094,7 @@ h5 {
     }
     h4 {
       font-size: 18px;
-      color: #fff;
+      color: var(--color-white);
       margin-bottom: 20px;
       line-height: 130%;
       margin-right: auto;
@@ -1049,7 +1114,7 @@ h5 {
         padding: 0 25px;
         color: #ababab;
         font-size: 13px;
-        background-color: #fff;
+        background-color: var(--color-white);
         border-radius: 30px;
         margin-right: 25px;
         @include breakpoint(phone) {
@@ -1149,6 +1214,9 @@ h5 {
       font-size: 21px;
       margin-right: 25px;
     }
+    a:hover {
+      color: var(--color-orange);
+    }
   }
   .site-footer__links {
     @include breakpoint(phone) {
@@ -1180,6 +1248,7 @@ h5 {
         &:first-child {
           font-weight: 600;
           margin-bottom: 26px;
+          color: var(--color-orange);
           @include breakpoint(phone) {
             margin-bottom: 34px;
           }
@@ -1336,7 +1405,7 @@ h5 {
       position: fixed;
       z-index: 99;
       padding: 20px 20px;
-      background-color: #fff;
+      background-color: var(--color-white);
       transition: all 0.4s ease;
       @include breakpoint(phone) {
         top: 134px;
@@ -1368,7 +1437,7 @@ h5 {
       padding: 8px 16px;
       z-index: 100;
       font-size: 12px;
-      background-color: #fff;
+      background-color: var(--color-white);
       border-bottom: 1px solid #e6e6e6;
       @include breakpoint(phone) {
         top: 100px;
@@ -1459,7 +1528,7 @@ h5 {
         display: none;
         z-index: 50;
         border: 1px solid #e5e5e5;
-        background-color: #fff;
+        background-color: var(--color-white);
         &.products-order-open {
           display: block;
         }
@@ -1564,7 +1633,7 @@ h5 {
       }
     }
     input:checked ~ p {
-      color: #fff;
+      color: var(--color-white);
     }
     input {
       display: none;
@@ -1707,7 +1776,7 @@ h5 {
   border: 1px solid #d8d8d8;
   &:hover,
   &.btn-heart--active {
-    color: #fff;
+    color: var(--color-white);
     background-color: var(--color-orange);
   }
 }
@@ -1917,7 +1986,7 @@ h5 {
   }
   .product-on-sale {
     background-color: #ff0000;
-    color: #fff;
+    color: var(--color-white);
     font-size: 11px;
     font-weight: 500;
     padding: 5px 9px;
@@ -2137,7 +2206,7 @@ h5 {
     }
     &.active {
       i {
-        color: #fff;
+        color: var(--color-white);
         background: var(--color-orange);
       }
     }
@@ -2445,7 +2514,7 @@ h5 {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fff;
+    color: var(--color-white);
     background-color: var(--color-orange);
     border-radius: 100%;
     position: absolute;
@@ -2621,7 +2690,7 @@ h5 {
 }
 
 .fb-btn {
-  color: #fff;
+  color: var(--color-white);
   font-weight: 600;
   border-radius: 40px;
   padding: 12px 30px;
@@ -2871,4 +2940,65 @@ h5 {
       background-color: red;
     }
   }
+}
+
+.contact-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 50px 0;
+  text-align: center;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  resize: none;
+  height: 100px;
+}
+
+.btn-submit {
+  background-color: var(--color-orange);
+  color: var(--color-black);
+  border: none;
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  width: 25%;
+}
+
+.btn-submit:hover {
+  background-color: var(--color-black);
+  color: var(--color-orange);
 }
