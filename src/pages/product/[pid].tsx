@@ -16,6 +16,7 @@ import { server } from "../../utils/server";
 
 type ProductPageType = {
   product: ProductType;
+  pid: string;
 };
 
 export const getServerSideProps: GetServerSideProps = async ({ query }) => {
@@ -26,16 +27,17 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
   return {
     props: {
       product,
+      pid,
     },
   };
 };
 
-const Product = ({ product }: ProductPageType) => {
+const Product = ({ product, pid }: ProductPageType) => {
   const [showBlock, setShowBlock] = useState("description");
 
   return (
     <Layout>
-      <Breadcrumb />
+      <Breadcrumb productId={pid} />
 
       <section className="product-single">
         <div className="container">

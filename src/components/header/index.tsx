@@ -85,7 +85,7 @@ const Header = ({ isErrorPage }: HeaderType) => {
               <div className="products-menu">
                 <ul>
                   <li>
-                    <Link href="/products">All collection</Link>
+                    <Link href="/products">All collections</Link>
                   </li>
                   <li>
                     <Link href="/products/dresses">Dresses</Link>
